@@ -6,9 +6,9 @@ First of all, you'll recieve the handshake which will look something like this:
 21 CF 1B 07 
 ```
 
-Decrypt it via `CryptDecrypt(1, data, 4)`.
+Decrypt it via `Decrypt(1, data, 4)`.
 The result from this is the key which is used afterwards:
 `crypto.SetKey(BitConverter.ToInt32(handshake_res, 8));`
 
 Once the key is set, encrypt and decrypt with flag 2:
- `CryptDecrypt(2, data, offset)`
+ `Decrypt(2, data, offset)`
